@@ -7,8 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+	<div class="container">
+		<ul class="nav nav-tabs">
+			<li><%= link_to "Fleeting", welcome_index_path %></li>
+			<li><%= link_to "About", about_path %></li>
+			</ul>
+		<%= yield %>
+	</div>
 
 </body>
 </html>
