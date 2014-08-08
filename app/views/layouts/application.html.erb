@@ -11,7 +11,12 @@
 		<ul class="nav nav-tabs">
 			<li><%= link_to "Fleeting", welcome_index_path %></li>
 			<li><%= link_to "About", about_path %></li>
-			</ul>
+		<div class="pull-right user-info">
+			<%= link_to "Sign Up", new_user_registration_path %> or
+			<%= link_to "Sign In", new_user_session_path %>
+		</div>
+		</ul>
+
 		<%= yield %>
 	</div>
 
