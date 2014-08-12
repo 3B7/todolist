@@ -28,3 +28,8 @@ gem 'spring',        group: :development
 
 gem 'bootstrap-sass'
 gem 'devise'
+
+group :development, :test do
+  gem 'capybara', '~> 2.4.1'
+  gem 'rspec-rails', '~> 3.0.2'
+end
