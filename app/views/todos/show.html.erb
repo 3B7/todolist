@@ -1,1 +1,14 @@
-<p><strong><%= @todo.description %></strong></p>
+<div class="jumbotron">
+  <div class="text-center">
+    <h3><strong><%= @todo.description %></strong></h3>
+  </br>
+  </br>
+    <%= link_to 'Delete', todo_path(@todo), method: :delete, class: "btn btn-danger btn-large" %>
+  </br>
+  </br>
+  <em>Feel free to erase the task from your to-do list if you're done. Either way it self-destructs after 7 days</em>
+  </br>
+  </br>
+  <%= link_to 'Back', todos_path, class: "btn btn-large btn-primary" %>
+  </div>
+</div>
