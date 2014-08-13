@@ -3,18 +3,23 @@
     </div>
   <div class="col-md-4">
     <div class="jumbotron">
-    <h4>Your To-Do:</h4>
+    <h3>Your To-Do:</h3>
       <% @todos.each do |t| %>
       <div class="media">
         <div class="media-body">
           <h4 class="media-heading">
             <%= link_to t.description, t %>
           </h4>
+          <small>
+            created <%= time_ago_in_words(t.created_at)%> ago
+          </small>
         </div>
       </div>
       <% end %>
     </div>
+    <% if can? :create, Todo %>
   <center><%= link_to 'New To-Do', new_todo_path, class: "btn btn-primary btn-large" %></center>
+    <% end %>
   </div>
 <div class="col-md-4">
 </div>

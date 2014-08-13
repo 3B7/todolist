@@ -5,10 +5,13 @@ class TodosController < ApplicationController
 
   def new
     @todo = Todo.new
+    authorize! :create, Todo, message: "You need to be a member to do that"
   end
 
+
   def create
-    @todo = Todo.new(todo_params)
+    @todo = current_user.todos.build(todo_params)
+    authorize! :create, @todo, message: "You need to be signed up to do that."
     @todo.save
 
     redirect_to @todo, notice: 'Your new TODO was saved.'
@@ -30,4 +33,5 @@ class TodosController < ApplicationController
   def todo_params
     params.require(:todo).permit(:description)
   end
+
 end
