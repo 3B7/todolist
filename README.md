@@ -7,3 +7,5 @@
 ######Todo.new was built using TDD best practices. 
 
 ######Add cancan gem to hide sensitive credentials.
+
+######Copy the "config/application.example.yml" file and paste your sensitive credentials within. 
