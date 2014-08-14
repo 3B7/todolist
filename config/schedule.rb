@@ -8,6 +8,6 @@
 #   runner "AnotherModel.prune_old_records"
 # end
 every 3.hours do
-  rake "delete_todos", :environment > :development
+  rake "delete_todos", :environment => :development
 end
 
