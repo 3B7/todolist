@@ -30,6 +30,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'cancan'
 gem 'figaro'
+gem 'whenever', :require => false
 
 group :development, :test do
   gem 'capybara', '~> 2.4.1'

@@ -8,4 +8,6 @@
 
 ######Add cancan gem to hide sensitive credentials.
 
-######Copy the "config/application.example.yml" file and paste your sensitive credentials within. 
+######Copy the "config/application.example.yml" file and paste your sensitive credentials within.
+
+######Used 'whenever' game to automate self-destruct rake action. 
